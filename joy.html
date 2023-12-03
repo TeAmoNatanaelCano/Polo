@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Joy💓</title>
+    <style>
+        body {
+            background-color: #87CEEB;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #000;
+        }
+
+        #parrafo {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .card {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: relative;
+        }
+
+        .card img {
+            max-width: 100%;
+        }
+
+        .card h1 {
+            color: #e44d26;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #333;
+            font-size: 1em;
+        }
+
+        .heart {
+            color: #e44d26;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <script>
+        function mostrarParrafo() {
+            var parrafo = document.getElementById("parrafo");
+            var card = document.querySelector(".card");
+            var segundaImagen = document.getElementById("segundaImagen");
+            var audio = document.getElementById("miAudio");
+
+            if (parrafo.style.display === "none" || parrafo.style.display === "") {
+                parrafo.style.display = "block";
+                card.style.display = "block";
+            } else {
+                parrafo.style.display = "none";
+                card.style.display = "none";
+            }
+
+            segundaImagen.style.display = "block";
+            audio.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>De: Daniel<br>Para: Para mi bebe joy ❤️</h1>
+
+    <img src="https://drive.google.com/uc?export=view&id=1J0z2iT_9NYeZou3ED7EY6_NwK9HhWaXC" alt="Imagen de Daniel y Joy" width="200" height="150">
+
+    <br>
+    <br>
+
+    <button onclick="mostrarParrafo()"> bechito😽</button>
+
+    <div id="parrafo"></div>
+
+    <div class="card">
+        <h1>Me gustas muchote</h1>
+        <p>Te dedico esta canción.</p>
+        <div class="heart">❤️</div>
+        <iframe width="316" height="150" src="https://www.youtube.com/embed/GVxU9jqgLeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+    </div>
+    <center>
+        <img id="segundaImagen" src="https://drive.google.com/uc?export=view&id=1m1mtZG3t0G0XsZ6H16ZtqkLlGKUZlMpJ" width="400" style="display: none;">
+<audio id="miAudio" controls>
+  <source src="https://drive.google.com/file/d/1vZZEaaJQ_F0LXVrTmyc__7dTAXBKWlWa/view?usp=drivesdk" type="audio/mp3">
+  Tu navegador no soporta el elemento de audio.
+</audio>  </center>
+</body>
+</html>
